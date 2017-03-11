@@ -1,0 +1,78 @@
+// make element flex
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// center element of the child both vertically and horizontally
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+// center element of the child and make it sticky to the top
+.flex-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+// make element fit 100% to the parent height
+.fit-content {
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: -fit-content;
+}
+
+// this class is used by all elements with the background image
+// it makes sure that the background image cover full width and height
+// of the element
+.bg-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// sets the direction of child elements (vertically/horizontally)
+.flex-direction(@direction, @orient) {
+  -webkit-box-orient: @orient;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;  
+}
+
+// 
+.flex-order(@orderNo) {
+  -webkit-box-ordinal-group: @orderNo + 1;
+  -ms-flex-order: @orderNo;
+  order: @orderNo;
+}
+
+// remove the appearance of the input
+.appearance(@value) {
+  -webkit-appearance: @value;
+  -moz-appearance: @value;
+  appearance: @value;
+}
+
+// makes flex elemenent grow regards number of column specified
+.flex-grow(@number) {
+  -webkit-box-flex: @number;
+  -ms-flex-positive: @number;
+  flex-grow: @number;
+}

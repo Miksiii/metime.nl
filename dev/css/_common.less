@@ -1,0 +1,136 @@
+// disallow user to make selection on the website
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+
+// Set the width for main components
+.mt-Header-content, 
+.mt-Services-content,
+.mt-Hzline-content,
+.mt-Form-content,
+.mt-Footer-content {
+
+  // xs devices
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+
+  // xs devices
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+  
+  // sm devices
+  @media screen and (min-width: 768px) {
+    width: 750px;
+  }
+
+  // md devices
+  @media screen and (min-width: 992px) {
+    width: 970px;
+  }    
+
+  // lg devices
+  @media screen and (min-width: 1200px) {
+    width: 1170px;
+  }  
+}
+
+// set main font for the headings
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-family: 'boucherie-cursive';
+  line-height: 1.33;
+}
+
+h1 { font-size: 3.4em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.1em; }
+
+p { line-height: 1.8; }
+
+// used by any element that must be hidden on the page for 
+// some reason
+.hidden {
+  display: none !important;
+}
+
+// used by ik wil mijn bestelling to fix its height
+.fix-height {
+  height: 25px;
+}
+
+// makes any element bolder
+.font-bold {
+  font-family: "Montserrat-medium", sans-serif;
+}
+
+// used for the footer highlighted links
+.underline-darko-range {
+  position: relative; 
+  color: @brand-dark;
+  text-decoration: none;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: @brand-orange-dark;
+    bottom: -2px;
+    left: 0;
+  }
+}
+
+// highlighting for a normal text
+.bold-dark {
+  color: dimgray;
+}
+
+// make sure word cant break element
+.nowrap {
+  white-space: nowrap;
+}
+
+// set default behaviour for the calendar
+.flatpickr-calendar {
+  font-family: 'Montserrat-light', sans-serif;
+  background-color: @brand-input;
+}
+
+// remove the border radius
+.flatpickr-day {
+  border-radius: 0px !important;
+}
+
+.flatpickr-day.today,
+.flatpickr-day.selected {
+  border-color: transparent !important;
+  border-radius: 0px;
+}
+
+// current day
+.flatpickr-day.today {
+  opacity: .5;
+  background-color: @brand-input;
+  color: #000;
+}
+
+// selected day
+.flatpickr-day.selected {
+  background-color: @brand-orange-dark !important;
+}
+
+// fixes the bug caused by flatpickr that changes the w/h of 
+// the date input
+.flatpickr-input {
+  margin-left: 14px;
+  cursor: pointer;
+}

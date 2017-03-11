@@ -1,0 +1,1 @@
+flatpickr("#flatpickr",{defaultDate:new Date,altInput:!0,altFormat:"j F, Y"});
